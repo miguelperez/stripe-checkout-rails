@@ -1,0 +1,24 @@
+<h1>Nice!!! everything setup.</h1>
+
+<div data-controller="redirect" data-redirect-url-value="<%= root_path %>">
+  You will be redirected back in <span data-target='redirect.seconds'></span> seconds.
+  <a data-target="redirect.link">or Click here to go now.</a>
+</div>
+
+<div class="collapse">
+  <input type="checkbox" id="collapse-section1" checked aria-hidden="true">
+  <label for="collapse-section1" aria-hidden="true">Session Data</label>
+  <div>
+    <pre>
+      <%= @session.to_s %>
+    </pre>
+  </div>
+
+  <input type="checkbox" id="collapse-section2" aria-hidden="true">
+  <label for="collapse-section2" aria-hidden="true">Customer Data</label>
+  <div>
+    <pre>
+      <%= @customer.to_s %>
+    </pre>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+module Stripe::CancelledCheckoutsHelper
+end

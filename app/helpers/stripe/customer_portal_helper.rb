@@ -1,0 +1,2 @@
+module Stripe::CustomerPortalHelper
+end
