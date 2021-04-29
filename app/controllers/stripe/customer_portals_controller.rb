@@ -7,7 +7,6 @@ class Stripe::CustomerPortalsController < ApplicationController
       })
       render json: customer_session.to_json
     rescue => e
-      p e
       render json: { message: e.message }.to_json, status: 400
     end
   end

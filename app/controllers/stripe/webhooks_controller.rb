@@ -40,7 +40,7 @@ class Stripe::WebhooksController < ApplicationController
   end
 
   def check_stripe_request!
-    webhook_secret = 'whsec_TTy6C0tIssPIZJ7Osm0eVD2t6gSbOiXj' # ENV['STRIPE_WEBHOOK_KEY']
+    webhook_secret = ENV['STRIPE_WEBHOOK_KEY']
     payload = request.body.read
     # Retrieve the event by verifying the signature using the raw body and secret if webhook signing is configured.
     sig_header = request.env['HTTP_STRIPE_SIGNATURE']
